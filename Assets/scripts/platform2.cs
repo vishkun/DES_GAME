@@ -37,7 +37,12 @@ public class platform2 : MonoBehaviour
 
     private void OncolllisionEnter2D(Collision2D collision)
     {
-        collision.transform.SetParent(transform);
+        if (collision.collider.CompareTag("Player"))
+        {
+            if (transform.position.y < collision.transform.position.y - 1.0f)
+                collision.transform.SetParent(transform);
+        }
+
     }
     private void OncolllisionExit2D(Collision2D collision)
     {

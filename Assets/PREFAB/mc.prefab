@@ -9,13 +9,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6435209540113719957}
+  - component: {fileID: 5976053026586724704}
   - component: {fileID: 6435209540113719962}
   - component: {fileID: 6435209540113719963}
   - component: {fileID: 6435209540113719960}
   - component: {fileID: 6435209540113719956}
   - component: {fileID: 6435209540113719958}
   - component: {fileID: 6435209540113719959}
-  - component: {fileID: 6435209540113719953}
   m_Layer: 3
   m_Name: mc
   m_TagString: Player
@@ -39,6 +39,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5976053026586724704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6435209540113719961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cf9638de6ec69f41ae3b066d3cb7b3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  maxHealth: 0
+  healthbar: {fileID: 0}
 --- !u!212 &6435209540113719962
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -129,7 +144,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 10.53, y: 6.53}
+    oldSize: {x: 8.424, y: 5.224}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -171,6 +186,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+  fallDetector: {fileID: 0}
   Glide_timeRemaining: 0.6
   glidingSpeed: 8
 --- !u!114 &6435209540113719959
@@ -193,19 +209,6 @@ MonoBehaviour:
   whatIsDamagable:
     serializedVersion: 2
     m_Bits: 0
---- !u!114 &6435209540113719953
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6435209540113719961}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cfe42e7930f7f24ea0eecf1fb6f515e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startingHealth: 99
 --- !u!1 &6435209540924124542
 GameObject:
   m_ObjectHideFlags: 0

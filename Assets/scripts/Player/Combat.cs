@@ -27,6 +27,7 @@ public class Combat : MonoBehaviour
     {
         checkCombatInput();
         checkAttack();
+        SpecialAttack();
     }
 
     private void checkCombatInput()
@@ -65,6 +66,23 @@ public class Combat : MonoBehaviour
         }
     }
 
+    private void SpecialAttack()
+    {
+        if (Input.GetKey(KeyCode.P))
+        {
+            anim.SetBool("SpecialAttack", true);
+        }
+        //if (Time.time >= lastInputTime + inputTimer)
+        //{
+        //    //wait for new input 
+        
+        //}
+
+    }
+    private void FinishSpecialAttack()//will gwt called at the end of attack animation 
+    {
+        anim.SetBool("SpecialAttack", false);
+    }
     private void CheckAttackHitBox()
     {
         Collider2D[] detectedObjects = Physics2D.OverlapCircleAll(attack1HitBoxPos.position, attack1Radius, whatIsDamagable);
@@ -83,6 +101,8 @@ public class Combat : MonoBehaviour
         anim.SetBool("isAttacking", isAttacking);
         anim.SetBool("attack1", false);
     }
+
+
 
     private void OnDrawGizmos()
     {

@@ -6,7 +6,9 @@ public class key3 : MonoBehaviour
 {
     public GameObject door;
     public int keyCount = 0;
-    public Sprite door_sprite;
+    public Sprite door_sprite,ui;
+    public bool collide;
+    public key_sprite k;
 
     private void OnTriggerEnter2D(Collider2D col)
     {
@@ -18,6 +20,8 @@ public class key3 : MonoBehaviour
             this.gameObject.SetActive(false);
             keyCount++;
 
+            collide = true;
+
             //if (keyCount == 0)
             //{
             //    door.GetComponent<SpriteRenderer>().sprite = door1;
@@ -25,6 +29,7 @@ public class key3 : MonoBehaviour
             if (keyCount == 1)
             {
                 door.GetComponent<SpriteRenderer>().sprite = door_sprite;
+                k.key.GetComponent<SpriteRenderer>().sprite = ui;
             }
             //if (keyCount == 2)
             //{

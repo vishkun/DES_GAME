@@ -9,6 +9,7 @@ public class PlayerHealth : MonoBehaviour
     public float health;
     public float maxHealth;
     public Image healthbar;
+    public ui_change u;
     
     // Start is called before the first frame update
     void Start()
@@ -19,6 +20,7 @@ public class PlayerHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        healthbar.fillAmount = Mathf.Clamp(health / maxHealth, 0, 1);
+        //healthbar.fillAmount = Mathf.Clamp(health / maxHealth, 0, 1);
+        u.change();
     }
 }

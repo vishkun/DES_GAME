@@ -1237,7 +1237,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5976053026586724704, guid: f6121109ed23d904589627da4603b37e, type: 3}
   m_PrefabInstance: {fileID: 6435209539663589949}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 2047880152}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9cf9638de6ec69f41ae3b066d3cb7b3f, type: 3}
@@ -1423,6 +1423,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea689efe9316a334ea0c7b694a71aa73, type: 3}
+--- !u!1 &2047880152 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6435209540113719961, guid: f6121109ed23d904589627da4603b37e, type: 3}
+  m_PrefabInstance: {fileID: 6435209539663589949}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2062818541
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1911,10 +1916,14 @@ PrefabInstance:
     - target: {fileID: 5976053026586724704, guid: f6121109ed23d904589627da4603b37e, type: 3}
       propertyPath: healthbar
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2133985311}
     - target: {fileID: 5976053026586724704, guid: f6121109ed23d904589627da4603b37e, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5976053026586724704, guid: f6121109ed23d904589627da4603b37e, type: 3}
+      propertyPath: maxHealth
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 6435209540113719957, guid: f6121109ed23d904589627da4603b37e, type: 3}
       propertyPath: m_RootOrder
@@ -1960,6 +1969,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6435209540113719958, guid: f6121109ed23d904589627da4603b37e, type: 3}
+      propertyPath: fallDetector
+      value: 
+      objectReference: {fileID: 2047880152}
     - target: {fileID: 6435209540113719959, guid: f6121109ed23d904589627da4603b37e, type: 3}
       propertyPath: AttackSound
       value: 

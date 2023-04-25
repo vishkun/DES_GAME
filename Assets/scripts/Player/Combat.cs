@@ -58,6 +58,7 @@ public class Combat : MonoBehaviour
                 
                 anim.SetBool("attack1", true);
                 anim.SetBool("firstAttack", isFirstAttack);
+                PlayAttackSound();
                 anim.SetBool("isAttacking", isAttacking);
 
                 
@@ -70,9 +71,13 @@ public class Combat : MonoBehaviour
             //wait for new input 
             gotInput = false;
         }
-        SoundManager.instance.PlaySound(AttackSound);
+        
     }
 
+   private void PlayAttackSound()
+    {
+        SoundManager.instance.PlaySound(AttackSound);
+    }
     private void SpecialAttack()
     {
         if (Input.GetKey(KeyCode.P))

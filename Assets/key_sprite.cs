@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class key_sprite : MonoBehaviour
 {
-    public key3 k;
+    public all_keys k;
     public GameObject key;
     //public int keyCount = 0;
     public Sprite sprite,sprite1;

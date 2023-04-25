@@ -47,25 +47,32 @@ public class PlayerMovement : MonoBehaviour
         anim.SetBool("run", horizontalInput != 0);
         anim.SetBool("grounded", grounded);
 
-        
+
         if ((body.velocity.y <= 0) && (Input.GetKey(KeyCode.Space)))//after falling down and canJump is true
         {
-            
+
             if (Glide_timeRemaining > 0.0)
             {
-               
 
+               
                 body.gravityScale = 0;
                 body.velocity = new Vector2(body.velocity.x, -glidingSpeed);
-                body.gravityScale = 0.4f;   //badda hi haggu fix bruh theek krliyo isse lmfao
+                //  body.gravityScale = 2.0f;   //badda hi haggu fix bruh theek krliyo isse lmfao
                 Glide_timeRemaining -= Time.deltaTime;
+                anim.SetBool("isGliding", true);
 
 
             }
-            
+
             //Debug.Log(Glide_timeRemaining);
         }
-
+        else
+        {
+            // glidingSpeed = 0.0f;
+                body.gravityScale = 2.0f;
+        }
+            
+        
         fallDetector.transform.position = new Vector2(transform.position.x, fallDetector.transform.position.y);
 
        
@@ -89,7 +96,10 @@ public class PlayerMovement : MonoBehaviour
     }
 
 
-
+    private void FinishGliding()//will gwt called at the end of attack animation 
+    {
+        anim.SetBool("isGliding", false);
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -110,8 +120,9 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.tag == "ground")
         {
             grounded = true;
-            Glide_timeRemaining=0.6f;
-            body.gravityScale = _initialGravityScale;
+            anim.SetBool("isGliding", false);
+            Glide_timeRemaining =0.8f;
+            body.gravityScale = 2.0f;
 
         }
 

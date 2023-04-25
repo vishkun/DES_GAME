@@ -13,6 +13,7 @@ public class Combat : MonoBehaviour
     [SerializeField]
     private LayerMask whatIsDamagable;
     private Animator anim;
+    [SerializeField] private AudioClip AttackSound; 
 
     private bool gotInput, isAttacking, isFirstAttack;
 
@@ -47,14 +48,20 @@ public class Combat : MonoBehaviour
         if (gotInput)
         {
             //perform attack 1
+            
             if (!isAttacking)//while not in attack animation 
             {
+                
                 gotInput = false;
                 isAttacking = true;
                 isFirstAttack = !isFirstAttack;  //used to alternate b/w the 2 attack animations
+                
                 anim.SetBool("attack1", true);
                 anim.SetBool("firstAttack", isFirstAttack);
+                PlayAttackSound();
                 anim.SetBool("isAttacking", isAttacking);
+
+                
 
             }
         }
@@ -64,8 +71,13 @@ public class Combat : MonoBehaviour
             //wait for new input 
             gotInput = false;
         }
+        
     }
 
+   private void PlayAttackSound()
+    {
+        SoundManager.instance.PlaySound(AttackSound);
+    }
     private void SpecialAttack()
     {
         if (Input.GetKey(KeyCode.P))
@@ -81,6 +93,7 @@ public class Combat : MonoBehaviour
     }
     private void FinishSpecialAttack()//will gwt called at the end of attack animation 
     {
+        
         anim.SetBool("SpecialAttack", false);
     }
     private void CheckAttackHitBox()

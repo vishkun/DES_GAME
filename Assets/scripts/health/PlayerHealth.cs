@@ -9,12 +9,16 @@ public class PlayerHealth : MonoBehaviour
     public float health;
     public float maxHealth;
     public Image healthbar;
+    private GameObject player;
+    private Animator anim;
     //public ui_change u;
-    
+
     // Start is called before the first frame update
     void Start()
     {
         maxHealth= health;
+        anim = GetComponent<Animator>();
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame
@@ -24,5 +28,13 @@ public class PlayerHealth : MonoBehaviour
         //u.change();
 
         //if(health)
+        if(player.gameObject.GetComponent<PlayerHealth>().health < 0)
+        {
+          
+                //anim.SetTrigger("die");
+
+               Destroy(gameObject);
+            
+        }
     }
 }

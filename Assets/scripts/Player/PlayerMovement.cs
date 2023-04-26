@@ -30,6 +30,7 @@ public class PlayerMovement : MonoBehaviour
     {
         float horizontalInput = Input.GetAxis("Horizontal");
         body.velocity = new Vector2(horizontalInput * speed, body.velocity.y);
+        
 
         //Flip player when facing left/right.
         if (horizontalInput > 0.01f)
@@ -56,7 +57,7 @@ public class PlayerMovement : MonoBehaviour
 
                
                 body.gravityScale = 0;
-                body.velocity = new Vector2(body.velocity.x, -glidingSpeed);
+                body.velocity = new Vector2(body.velocity.x , -glidingSpeed);
                 //  body.gravityScale = 2.0f;   //badda hi haggu fix bruh theek krliyo isse lmfao
                 Glide_timeRemaining -= Time.deltaTime;
                 anim.SetBool("isGliding", true);
@@ -79,9 +80,12 @@ public class PlayerMovement : MonoBehaviour
     }
     private void Jump()
     {
-        body.velocity = new Vector2(body.velocity.x, speed);
+        body.velocity = new Vector2(body.velocity.x, speed * 0.95f);
+        //body.velocity = new Vector2(0.05f, speed * 0.75f);
         anim.SetTrigger("jump");
         grounded = false;
+
+        //while(!grounded) { body.gravityScale = 5.0f; }
 
         //if ( body.velocity.y <= 0)//after falling down and canJump is true
         //{
@@ -100,6 +104,11 @@ public class PlayerMovement : MonoBehaviour
     {
         anim.SetBool("isGliding", false);
     }
+
+    //private void EndJump()
+    //{
+    //    body.gravityScale = 5.0f;
+    //}
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

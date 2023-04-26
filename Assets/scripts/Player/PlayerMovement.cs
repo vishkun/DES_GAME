@@ -80,7 +80,7 @@ public class PlayerMovement : MonoBehaviour
     }
     private void Jump()
     {
-        body.velocity = new Vector2(body.velocity.x, speed * 0.95f);
+        body.velocity = new Vector2(body.velocity.x, speed * 1.25f);
         //body.velocity = new Vector2(0.05f, speed * 0.75f);
         anim.SetTrigger("jump");
         grounded = false;

@@ -529,7 +529,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -552,7 +552,7 @@ Canvas:
   m_RenderMode: 0
   m_Camera: {fileID: 132575839}
   m_PlaneDistance: 100
-  m_PixelPerfect: 0
+  m_PixelPerfect: 1
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
@@ -1168,7 +1168,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 602032154}
   m_LocalRotation: {x: 0, y: 0, z: 0.5, w: 0.8660254}
-  m_LocalPosition: {x: 260, y: 185, z: 0}
+  m_LocalPosition: {x: 260, y: 200, z: 0}
   m_LocalScale: {x: 7, y: 7, z: 6}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1441,7 +1441,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 701159134}
   m_LocalRotation: {x: 0, y: 0, z: 0.5, w: 0.8660254}
-  m_LocalPosition: {x: 310, y: 185, z: 0}
+  m_LocalPosition: {x: 310, y: 200, z: 0}
   m_LocalScale: {x: 7, y: 7, z: 8}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1746,7 +1746,7 @@ GameObject:
   - component: {fileID: 805418249}
   - component: {fileID: 805418248}
   - component: {fileID: 805418247}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: keyCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1782,7 +1782,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -1805,7 +1805,7 @@ Canvas:
   m_RenderMode: 1
   m_Camera: {fileID: 132575839}
   m_PlaneDistance: 100
-  m_PixelPerfect: 0
+  m_PixelPerfect: 1
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
@@ -2025,7 +2025,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -312.3, y: 133.1}
+  m_AnchoredPosition: {x: -315, y: 145}
   m_SizeDelta: {x: 25, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &930126808
@@ -2933,7 +2933,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 103002265036689196, guid: 19aa39789fcb4084f98c6efcf3c1a666, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 348
+      value: 380
       objectReference: {fileID: 0}
     - target: {fileID: 103002265036689197, guid: 19aa39789fcb4084f98c6efcf3c1a666, type: 3}
       propertyPath: m_Sprite
@@ -3327,7 +3327,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1809370082}
   m_LocalRotation: {x: 0, y: 0, z: 0.5, w: 0.8660254}
-  m_LocalPosition: {x: 360, y: 185, z: 0}
+  m_LocalPosition: {x: 360, y: 200, z: 0}
   m_LocalScale: {x: 7, y: 7, z: 8}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3970,7 +3970,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}

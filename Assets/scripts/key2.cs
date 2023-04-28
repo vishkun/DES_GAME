@@ -5,7 +5,7 @@ using UnityEngine;
 public class key2 : MonoBehaviour
 {
     public GameObject door;
-    public int keyCount = 1;
+    public int keyCount = 0;
     public Sprite door_sprite;
 
     //public AudioSource audioSource;
@@ -16,7 +16,7 @@ public class key2 : MonoBehaviour
         if (col.gameObject.tag == "Player")
         {
             door.GetComponent<BoxCollider2D>().enabled = false;
-            
+
             this.gameObject.SetActive(false);
             //audioSource.PlayOneShot(soundClip);
             keyCount++;

@@ -5,7 +5,7 @@ using UnityEngine;
 public class key3 : MonoBehaviour
 {
     public GameObject door;
-    public int keyCount = 2;
+    public int keyCount = 0;
     public Sprite door_sprite;
 
     //public AudioSource audioSource;

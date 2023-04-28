@@ -1,11 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class all_keys : MonoBehaviour
 {
     public GameObject door;
-    public GameObject key;
+
+    public Sprite key1,key2,key3;
+    public Image key_collect1, key_collect2, key_collect3;
+
     public int keyCount = 0;
     public Sprite door_sprite, ui;
     public bool collide;
@@ -30,18 +34,20 @@ public class all_keys : MonoBehaviour
             if (keyCount == 1)
             {
                 door.GetComponent<SpriteRenderer>().sprite = door_sprite;
-                key.GetComponent<SpriteRenderer>().sprite = ui;
+                key_collect1.sprite = key1;
             }
             if (keyCount == 2)
             {
                 door.GetComponent<SpriteRenderer>().sprite = door_sprite;
-                key.GetComponent<SpriteRenderer>().sprite = ui;
+                key_collect2.sprite = key2;
             }
             if (keyCount == 3)
             {
                 door.GetComponent<SpriteRenderer>().sprite = door_sprite;
-                key.GetComponent<SpriteRenderer>().sprite = ui;
+                key_collect3.sprite = key3;
             }
         }
+
+        
     }
 }

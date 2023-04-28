@@ -24,7 +24,7 @@ public class EnemyDamage : MonoBehaviour
         {
             if (collision.gameObject.CompareTag("Player"))
             {
-              gameObject.GetComponent<EnemyHealth>().health -= 50;
+              gameObject.GetComponent<EnemyHealth>().health -= damage;
 
             if (Health.health < 0)
             {

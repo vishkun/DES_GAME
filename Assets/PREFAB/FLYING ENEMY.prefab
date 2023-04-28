@@ -218,8 +218,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2de8901c025007438f253187fd8dc42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 0}
-  bulletPos: {fileID: 0}
+  bullet: {fileID: 6285712810918091819, guid: f9fb6f8bb7cf7d541824e067c6442089, type: 3}
+  bulletPos: {fileID: 1548481527788446510}
 --- !u!114 &7866448642525887051
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -232,7 +232,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7200587067619d43b8537ca77bded5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 0
   chase: 0
   startingPoint: {fileID: 7866448641955129135}
 --- !u!50 &7866448642525887049

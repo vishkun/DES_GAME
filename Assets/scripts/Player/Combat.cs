@@ -51,17 +51,17 @@ public class Combat : MonoBehaviour
             
             if (!isAttacking)//while not in attack animation 
             {
-                
+
                 gotInput = false;
                 isAttacking = true;
                 isFirstAttack = !isFirstAttack;  //used to alternate b/w the 2 attack animations
-                
+
                 anim.SetBool("attack1", true);
                 anim.SetBool("firstAttack", isFirstAttack);
                 PlayAttackSound();
                 anim.SetBool("isAttacking", isAttacking);
 
-                
+
 
             }
         }

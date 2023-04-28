@@ -33,7 +33,7 @@ public class Combat : MonoBehaviour
 
     private void checkCombatInput()
     {
-        if (Input.GetKey(KeyCode.LeftControl))
+        if (Input.GetKey(KeyCode.Mouse0))
         {
             if (combatEnabled)
             {

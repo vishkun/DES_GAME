@@ -9408,6 +9408,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   videoPlayer: {fileID: 3182255128387799386, guid: 961ec6a10b3ace3429ca4c02a716bebf, type: 3}
+  sound: {fileID: 715014405}
   timetoStop: 20
   play: {fileID: 964025692}
   canvas: {fileID: 1453314116}

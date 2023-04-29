@@ -5,10 +5,11 @@ using UnityEngine.Video;
 
 public class END_GAME : MonoBehaviour
 {
-    public GameObject videoPlayer;
+    public GameObject videoPlayer,sound;
     public int timetoStop;
     public VideoPlayer play;
     public GameObject canvas;
+    //public AudioClip s;
 
     void Start()
     {
@@ -19,6 +20,7 @@ public class END_GAME : MonoBehaviour
 
         if (player.gameObject.tag == "Player")
         {
+            sound.SetActive(false);
             canvas.SetActive(true);
             play.Play();
             videoPlayer.SetActive(true);

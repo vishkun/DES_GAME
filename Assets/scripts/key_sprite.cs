@@ -27,10 +27,10 @@ public class key_sprite : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D col)
     {
         //if(col.CompareTag("Player"))
-        if (k.collide)
+        /*if (k.collide)
         {
             //key.GetComponent<SpriteRenderer>().sprite = sprite;
             key.GetComponent<SpriteRenderer>().sprite = sprite1;
-        }
+        }*/
     }
 }

@@ -11,6 +11,7 @@ public class PlayerHealth : MonoBehaviour
     public Image healthbar;
     private GameObject player;
     private Animator anim;
+    [SerializeField] public GameObject endscreen;
     //public ui_change u;
 
     // Start is called before the first frame update
@@ -31,10 +32,19 @@ public class PlayerHealth : MonoBehaviour
         if(player.gameObject.GetComponent<PlayerHealth>().health < 0)
         {
           
-                //anim.SetTrigger("die");
+                anim.SetTrigger("die");
 
-               Destroy(gameObject);
+            //Destroy(gameObject);
             
+            Invoke("death", 2.0f);
+
         }
+
     }
+    private void death()
+    {
+        endscreen.SetActive(true);
+
+    }
+    
 }

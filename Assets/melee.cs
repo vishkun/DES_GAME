@@ -5,7 +5,7 @@ public class melee : MonoBehaviour
     [Header("Attack Parameters")]
     [SerializeField] private float attackCooldown;
     [SerializeField] private float range;
-    [SerializeField] private int damage;
+    [SerializeField] private float damage;
 
     [Header("Collider Parameters")]
     [SerializeField] private float colliderDistance;
@@ -16,14 +16,19 @@ public class melee : MonoBehaviour
     private float cooldownTimer = Mathf.Infinity;
 
     //References
-    private Animator anim;
+    private Animator animp,anim;
+    private GameObject player;
     private PlayerHealth playerHealth;
     private EnemyPatrol enemyPatrol;
+    private Combat C;
+    private bool attack;
 
     private void Awake()
     {
-        anim = GetComponent<Animator>();
+        anim=GetComponent<Animator>();
         enemyPatrol = GetComponentInParent<EnemyPatrol>();
+        player = GameObject.FindGameObjectWithTag("Player");
+        animp = player.GetComponent<Animator>();
     }
 
     private void Update()
@@ -37,6 +42,7 @@ public class melee : MonoBehaviour
             {
                 cooldownTimer = 0;
                 anim.SetTrigger("meleeAttack");
+                attack = true;
             }
         }
 
@@ -66,7 +72,10 @@ public class melee : MonoBehaviour
 
     private void DamagePlayer()
     {
-        if (PlayerInSight())
-            playerHealth.health--;
+        if (PlayerInSight() && attack)
+        {
+            animp.SetTrigger("hurt");
+            playerHealth.health = (playerHealth.health) - (damage);
+        }
     }
 }

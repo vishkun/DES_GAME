@@ -15,7 +15,8 @@ public class Combat : MonoBehaviour
     private Animator anim;
     [SerializeField] private AudioClip AttackSound; 
 
-    private bool gotInput, isAttacking, isFirstAttack;
+    private bool /*gotInput,*/ isAttacking, isFirstAttack;
+    public bool gotInput;
 
     private float lastInputTime = Mathf.NegativeInfinity;  //records the last time we attempted to attack 
 
@@ -120,5 +121,10 @@ public class Combat : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(attack1HitBoxPos.position, attack1Radius);
+    }
+
+    public bool ReturnIsAttacking()
+    {
+        return gotInput;
     }
 }

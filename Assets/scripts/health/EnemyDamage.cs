@@ -8,6 +8,7 @@ public class EnemyDamage : MonoBehaviour
     
         public EnemyHealth Health;
         public float damage;
+        public Combat C;
         // Start is called before the first frame update
         void Start()
         {
@@ -17,14 +18,15 @@ public class EnemyDamage : MonoBehaviour
         // Update is called once per frame
         void Update()
         {
-
+            //Debug.Log(C.isAttacking);
         }
 
         private void OnCollisionEnter2D(Collision2D collision)
         {
-            if (collision.gameObject.CompareTag("Player"))
+            if (collision.gameObject.CompareTag("Player")&&(Input.GetKey(KeyCode.Mouse0)))
             {
-              gameObject.GetComponent<EnemyHealth>().health -= damage;
+                //Debug.Log(C.ReturnIsAttacking());
+                gameObject.GetComponent<EnemyHealth>().health -= damage;
 
             if (Health.health < 0)
             {

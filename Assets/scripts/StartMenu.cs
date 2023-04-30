@@ -16,24 +16,13 @@ public class StartMenu : MonoBehaviour
         // Add event listeners to the buttons
         playButton.onClick.AddListener(ResumeGame);
 
-
         // Hide the PauseCanvas at the start of the game
         PauseGame();
     }
 
     void Update()
     {
-        /*if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            if (!isPaused)
-            {
-                PauseGame();
-            }
-            else
-            {
-                ResumeGame();
-            }
-        }*/
+        
     }
 
     void PauseGame()
@@ -44,17 +33,11 @@ public class StartMenu : MonoBehaviour
         startCanvas.SetActive(true);
     }
 
-    void ResumeGame()
+    public void ResumeGame()
     {
         Time.timeScale = 1f;
         isPaused = false;
         // Hide the PauseCanvas
         startCanvas.SetActive(false);
-    }
-
-    void QuitGame()
-    {
-        //UnityEditor.EditorApplication.isPlaying = false;
-        /*Application.Quit();*/
     }
 }

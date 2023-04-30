@@ -32,19 +32,11 @@ public class PlayerHealth : MonoBehaviour
         if(player.gameObject.GetComponent<PlayerHealth>().health < 0)
         {
           
-                anim.SetTrigger("die");
+                //anim.SetTrigger("die");
 
-            //Destroy(gameObject);
+               Destroy(gameObject);
             
-            Invoke("death", 2.0f);
-
         }
-
-    }
-    private void death()
-    {
-        endscreen.SetActive(true);
-
     }
     
 }

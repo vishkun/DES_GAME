@@ -8,7 +8,7 @@ public class all_keys : MonoBehaviour
     //public GameObject door;
     //public GameObject key;
 
-    static int keyCount = 0;
+    public static int keyCount = 0;
 
     public Sprite door_sprite, ui;
     //public bool collide;

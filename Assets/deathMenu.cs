@@ -15,6 +15,7 @@ public class deathMenu : MonoBehaviour
 
     public Button quit;
     public Button restartGame;
+    
 
     //public GameObject startMenu;
 

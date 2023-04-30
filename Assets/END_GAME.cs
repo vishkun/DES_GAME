@@ -13,7 +13,7 @@ public class END_GAME : MonoBehaviour
 
     void Start()
     {
-        videoPlayer.SetActive(false);
+       // videoPlayer.SetActive(false);
     }
     public void OnTriggerEnter2D(Collider2D player)
     {

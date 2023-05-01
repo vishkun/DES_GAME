@@ -17,6 +17,7 @@ public class Combat : MonoBehaviour
 
     private bool /*gotInput,*/ isAttacking, isFirstAttack;
     public bool gotInput;
+    public Bealzebuddy_Cooldown B;
 
     private float lastInputTime = Mathf.NegativeInfinity;  //records the last time we attempted to attack 
 
@@ -81,10 +82,10 @@ public class Combat : MonoBehaviour
     }
     private void SpecialAttack()
     {
-        if (Input.GetKey(KeyCode.P))
-        {
-            anim.SetBool("SpecialAttack", true);
-        }
+        //if (Input.GetKey(KeyCode.P)/*&&(B.isCooldown==true)*/)
+        //{
+        //    anim.SetBool("SpecialAttack", true);
+        //}
         //if (Time.time >= lastInputTime + inputTimer)
         //{
         //    //wait for new input 

@@ -11,9 +11,13 @@ public class Bealzebuddy_Cooldown : MonoBehaviour
     [SerializeField]
     private TMP_Text text_cooldown;
 
-    private bool isCooldown = false;
+    public bool isCooldown = false;
     private float cooldownTime = 10.0f;
     private float cooldownTimer = 0.0f;
+    private GameObject player;
+    private Animator animp;
+
+
 
     public AudioSource audioSource; 
     public AudioClip soundClip; 
@@ -24,6 +28,9 @@ public class Bealzebuddy_Cooldown : MonoBehaviour
         text_cooldown.gameObject.SetActive(false);
         fill_cooldown.fillAmount = 10.0f;
         UseAbility();
+
+        player = GameObject.FindGameObjectWithTag("Player");
+        animp = player.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -32,7 +39,13 @@ public class Bealzebuddy_Cooldown : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.P))
         {
-            UseAbility();
+            if (!(isCooldown))
+            {
+                UseAbility();
+                animp.SetBool("SpecialAttack", true);
+                isCooldown = true;
+                
+            }
         }
         if(isCooldown)
         {
@@ -72,9 +85,11 @@ public class Bealzebuddy_Cooldown : MonoBehaviour
         }
         else
         {
+            
             isCooldown = true;
             text_cooldown.gameObject.SetActive(true);
             cooldownTimer = cooldownTime;
+            
             //return true;
         }
     }

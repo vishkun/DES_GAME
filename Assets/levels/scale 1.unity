@@ -33513,6 +33513,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fill_cooldown: {fileID: 1902873741}
   text_cooldown: {fileID: 87867020}
+  isCooldown: 0
   audioSource: {fileID: 715014406}
   soundClip: {fileID: 8300000, guid: 538e3af4212c46542bcaedf3b75743ca, type: 3}
 --- !u!114 &930126809
@@ -61505,7 +61506,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8107318636380838082, guid: eba8c25a998194243913bb105c546574, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8107318636380838083, guid: eba8c25a998194243913bb105c546574, type: 3}
       propertyPath: speed

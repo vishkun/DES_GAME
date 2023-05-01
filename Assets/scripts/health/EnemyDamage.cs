@@ -23,7 +23,7 @@ public class EnemyDamage : MonoBehaviour
 
         private void OnCollisionEnter2D(Collision2D collision)
         {
-            if (collision.gameObject.CompareTag("Player")&&(Input.GetKey(KeyCode.Mouse0)))
+            if (collision.gameObject.CompareTag("Player")&&(Input.GetKey(KeyCode.LeftControl)))
             {
                 //Debug.Log(C.ReturnIsAttacking());
                 gameObject.GetComponent<EnemyHealth>().health -= damage;

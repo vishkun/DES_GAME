@@ -80618,6 +80618,102 @@ MonoBehaviour:
   playerHealth: {fileID: 1869910199}
   quit: {fileID: 1742535383}
   restartGame: {fileID: 432249603}
+--- !u!82 &2047880175
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2047880152}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &2049138495
 GameObject:
   m_ObjectHideFlags: 0
@@ -85497,6 +85593,42 @@ PrefabInstance:
       propertyPath: AttackSound
       value: 
       objectReference: {fileID: 8300000, guid: 3adfd36e4973abb4084a1141abeb871c, type: 3}
+    - target: {fileID: 6435209540113719959, guid: f6121109ed23d904589627da4603b37e, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 52712697}
+    - target: {fileID: 6435209540113719959, guid: f6121109ed23d904589627da4603b37e, type: 3}
+      propertyPath: AttackSound1
+      value: 
+      objectReference: {fileID: 8300000, guid: 582ac48e7bd54bf42a0e0200fa4f757e, type: 3}
+    - target: {fileID: 6435209540113719959, guid: f6121109ed23d904589627da4603b37e, type: 3}
+      propertyPath: AttackSound2
+      value: 
+      objectReference: {fileID: 8300000, guid: 86e033194d0f2934d9a033283eeed9c2, type: 3}
+    - target: {fileID: 6435209540113719959, guid: f6121109ed23d904589627da4603b37e, type: 3}
+      propertyPath: AttackSound3
+      value: 
+      objectReference: {fileID: 8300000, guid: 6bda7b25a6e352a41a383b2f98025562, type: 3}
+    - target: {fileID: 6435209540113719959, guid: f6121109ed23d904589627da4603b37e, type: 3}
+      propertyPath: audioListener
+      value: 
+      objectReference: {fileID: 132575838}
+    - target: {fileID: 6435209540113719959, guid: f6121109ed23d904589627da4603b37e, type: 3}
+      propertyPath: AttackSounds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6435209540113719959, guid: f6121109ed23d904589627da4603b37e, type: 3}
+      propertyPath: AttackSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 582ac48e7bd54bf42a0e0200fa4f757e, type: 3}
+    - target: {fileID: 6435209540113719959, guid: f6121109ed23d904589627da4603b37e, type: 3}
+      propertyPath: AttackSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 86e033194d0f2934d9a033283eeed9c2, type: 3}
+    - target: {fileID: 6435209540113719959, guid: f6121109ed23d904589627da4603b37e, type: 3}
+      propertyPath: AttackSounds.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 6bda7b25a6e352a41a383b2f98025562, type: 3}
     - target: {fileID: 6435209540113719960, guid: f6121109ed23d904589627da4603b37e, type: 3}
       propertyPath: m_Size.x
       value: 1.4621658

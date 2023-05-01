@@ -15,10 +15,13 @@ public class all_keys : MonoBehaviour
     //public Sprite k1,k2,k3;
     public Image image1, image2, image3;
     
-
     public AudioSource audioSource;
     public AudioClip soundClip;
 
+    private void Start()
+    {
+        Debug.Log("keyCount is currently " + all_keys.keyCount);
+    }
 
     private void OnTriggerEnter2D(Collider2D col)
     {

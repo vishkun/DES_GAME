@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Combat : MonoBehaviour
@@ -13,7 +14,10 @@ public class Combat : MonoBehaviour
     [SerializeField]
     private LayerMask whatIsDamagable;
     private Animator anim;
-    [SerializeField] private AudioClip AttackSound; 
+
+    [SerializeField] private AudioClip[] AttackSounds;
+    public AudioSource audioSource;
+    public AudioListener audioListener;
 
     private bool /*gotInput,*/ isAttacking, isFirstAttack;
     public bool gotInput;
@@ -25,6 +29,9 @@ public class Combat : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         anim.SetBool("canAttack", combatEnabled);
+
+        audioListener = GetComponent<AudioListener>();
+        audioSource = gameObject.GetComponent<AudioSource>();
     }
     private void Update()
     {
@@ -35,12 +42,13 @@ public class Combat : MonoBehaviour
 
     private void checkCombatInput()
     {
-        if (Input.GetKey(KeyCode.Mouse0))
+        if (Input.GetKey(KeyCode.I))
         {
             if (combatEnabled)
             {
                 gotInput = true;
                 lastInputTime = Time.time;
+                PlayAttackSound();
             }
         }
     }
@@ -62,9 +70,6 @@ public class Combat : MonoBehaviour
                 anim.SetBool("firstAttack", isFirstAttack);
                 PlayAttackSound();
                 anim.SetBool("isAttacking", isAttacking);
-
-
-
             }
         }
 
@@ -73,12 +78,28 @@ public class Combat : MonoBehaviour
             //wait for new input 
             gotInput = false;
         }
-        
     }
 
    private void PlayAttackSound()
     {
-        SoundManager.instance.PlaySound(AttackSound);
+        audioSource.clip = AttackSounds[Random.Range(0, AttackSounds.Length)];
+        audioSource.Play();
+
+        /*float randomNumber = Random.Range(1f, 3f);
+        
+        if (randomNumber == 1)
+        {
+            SoundManager.instance.PlaySound(AttackSound1);
+        }
+        else if (randomNumber == 2)
+        {
+            SoundManager.instance.PlaySound(AttackSound2);
+        }
+        else if (randomNumber == 3)
+        {
+            SoundManager.instance.PlaySound(AttackSound3);
+        }*/
+
     }
     private void SpecialAttack()
     {

@@ -45,7 +45,7 @@ public class deathMenu : MonoBehaviour
         {
             anim.SetTrigger("die");
             //deathCanvas.SetActive(true);
-            Invoke("death", 4.0f);
+            Invoke("death", 1.5f);
         }
     }
 

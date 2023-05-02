@@ -54,7 +54,7 @@ public class EnemyDamage : MonoBehaviour
         if (collision.gameObject.CompareTag("Player") && (Input.GetKey(KeyCode.P)))
         {
 
-            Destroy(gameObject);
+            gameObject.SetActive(false);
             //Debug.Log(C.ReturnIsAttacking());
             //gameObject.GetComponent<EnemyHealth>().health -= 1000.0f;
 
@@ -69,7 +69,7 @@ public class EnemyDamage : MonoBehaviour
 
     private void death()
     {
-        Destroy(gameObject);
+        gameObject.SetActive(false);
 
     }
 }

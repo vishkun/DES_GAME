@@ -18,7 +18,7 @@ public class deathMenu : MonoBehaviour
 
     public Animator anim;
     public GameObject player;
-    
+
 
     //public GameObject startMenu;
 
@@ -29,7 +29,7 @@ public class deathMenu : MonoBehaviour
         restartGame.onClick.AddListener(ResetGame);
 
         player = GameObject.FindGameObjectWithTag("Player");
-        anim=player.GetComponent<Animator>();
+        anim = player.GetComponent<Animator>();
         quit = deathCanvas.transform.Find("quitButton").GetComponent<Button>();
         quit.onClick.AddListener(QuitGame);
 
@@ -41,8 +41,9 @@ public class deathMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (playerHealth.health <=1.0f)
+        if (playerHealth.health <= 1.0f)
         {
+            
             anim.SetTrigger("die");
             //deathCanvas.SetActive(true);
             Invoke("death", 1.5f);
@@ -53,23 +54,28 @@ public class deathMenu : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         print("Scene is reset");
-            
+
         all_keys.keyCount = 0;
         print("key value reset");
 
-        
+
     }
 
-    
 
 
 
-    
-        private void death()
-        {
-            deathCanvas.SetActive(true);
 
-        }
+
+    private void death()
+    {
+        deathCanvas.SetActive(true);
+        Invoke("freezeGameplay", 2.25f);
+    }
+
+    private void freezeGameplay()
+    {
+        Time.timeScale = 0f;
+    }
 
     void QuitGame()
     {

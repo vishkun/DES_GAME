@@ -12,6 +12,8 @@ public class PlayerHealth : MonoBehaviour
     private GameObject player;
     private Animator anim;
     [SerializeField] public GameObject endscreen;
+
+    
     //public ui_change u;
 
     // Start is called before the first frame update
@@ -35,7 +37,8 @@ public class PlayerHealth : MonoBehaviour
                 //anim.SetTrigger("die");
 
                Destroy(gameObject);
-            
+               
+
         }
     }
     

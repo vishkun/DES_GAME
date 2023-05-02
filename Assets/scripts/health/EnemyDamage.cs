@@ -23,7 +23,7 @@ public class EnemyDamage : MonoBehaviour
             float distance = Vector2.Distance(this.transform.position, player.transform.position);
             
             Debug.Log(distance);
-        if (distance<7&&Input.GetKey(KeyCode.P))
+        if (distance<6&&Input.GetKey(KeyCode.P))
         {
             //Destroy(gameObject);
             Destroy(gameObject, 1.0f);

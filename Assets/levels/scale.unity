@@ -24874,6 +24874,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dee42470e8951af4e999b621080593a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  move: {fileID: 0}
+  player: {fileID: 0}
+  animp: {fileID: 0}
+  C: {fileID: 0}
 --- !u!1 &657796773
 GameObject:
   m_ObjectHideFlags: 0
@@ -78176,17 +78180,21 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 6741115354346886802, guid: bf5a9d5a91036f542870d78ac1ee4400, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6741115354346886803, guid: bf5a9d5a91036f542870d78ac1ee4400, type: 3}
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6741115354346886803, guid: bf5a9d5a91036f542870d78ac1ee4400, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 37.2
+      value: 37.1
       objectReference: {fileID: 0}
     - target: {fileID: 6741115354346886803, guid: bf5a9d5a91036f542870d78ac1ee4400, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.4
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 6741115354346886803, guid: bf5a9d5a91036f542870d78ac1ee4400, type: 3}
       propertyPath: m_LocalPosition.z
@@ -78227,6 +78235,10 @@ PrefabInstance:
     - target: {fileID: 6741115354346886807, guid: bf5a9d5a91036f542870d78ac1ee4400, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6741115354346886807, guid: bf5a9d5a91036f542870d78ac1ee4400, type: 3}
+      propertyPath: m_TagString
+      value: enemy
       objectReference: {fileID: 0}
     - target: {fileID: 7488894298561349113, guid: bf5a9d5a91036f542870d78ac1ee4400, type: 3}
       propertyPath: damage
@@ -91252,11 +91264,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6435209540113719957, guid: f6121109ed23d904589627da4603b37e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -24.1
+      value: 46.4
       objectReference: {fileID: 0}
     - target: {fileID: 6435209540113719957, guid: f6121109ed23d904589627da4603b37e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.1
+      value: 2.6
       objectReference: {fileID: 0}
     - target: {fileID: 6435209540113719957, guid: f6121109ed23d904589627da4603b37e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -91385,6 +91397,14 @@ PrefabInstance:
     - target: {fileID: 6435209540113719962, guid: f6121109ed23d904589627da4603b37e, type: 3}
       propertyPath: m_Size.y
       value: 7.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6435209540924124537, guid: f6121109ed23d904589627da4603b37e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.34
+      objectReference: {fileID: 0}
+    - target: {fileID: 6435209540924124537, guid: f6121109ed23d904589627da4603b37e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.02
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
@@ -91517,6 +91537,10 @@ PrefabInstance:
       propertyPath: damage
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 7400772896410182738, guid: 6a9a656c9c5501547bbd1b255009aa70, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7866448642367277352, guid: 6a9a656c9c5501547bbd1b255009aa70, type: 3}
       propertyPath: m_Name
       value: FLYING ENEMY
@@ -91587,7 +91611,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7866448642525887051, guid: 6a9a656c9c5501547bbd1b255009aa70, type: 3}
       propertyPath: speed
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7866448642525887095, guid: 6a9a656c9c5501547bbd1b255009aa70, type: 3}
       propertyPath: m_Size.x

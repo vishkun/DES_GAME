@@ -16,7 +16,7 @@ public class Bealzebuddy_Cooldown : MonoBehaviour
     private float cooldownTimer = 0.0f;
     private GameObject player;
     private Animator animp;
-
+    private PlayerMovement move;
 
 
     public AudioSource audioSource; 
@@ -30,6 +30,9 @@ public class Bealzebuddy_Cooldown : MonoBehaviour
         UseAbility();
 
         player = GameObject.FindGameObjectWithTag("Player");
+        
+        move= player.GetComponent<PlayerMovement>();
+
         animp = player.GetComponent<Animator>();
     }
 
@@ -85,7 +88,7 @@ public class Bealzebuddy_Cooldown : MonoBehaviour
         }
         else
         {
-            
+            //move.P = false;
             isCooldown = true;
             text_cooldown.gameObject.SetActive(true);
             cooldownTimer = cooldownTime;

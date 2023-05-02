@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     private bool grounded;
     private Vector3 RespawnPoint;
     public GameObject fallDetector;
+    public bool P=false;
 
     [SerializeField] private float Glide_timeRemaining;
 
@@ -28,6 +29,12 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        if(Input.GetKey(KeyCode.P))
+        {
+            P = true;
+        }
+        
+        
         float horizontalInput = Input.GetAxis("Horizontal");
         body.velocity = new Vector2(horizontalInput * speed, body.velocity.y);
         

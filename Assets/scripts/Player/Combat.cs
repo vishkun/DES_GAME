@@ -19,6 +19,7 @@ public class Combat : MonoBehaviour
     public AudioSource audioSource;
     public AudioListener audioListener;
 
+    
     private bool /*gotInput,*/ isAttacking, isFirstAttack;
     public bool gotInput;
     public Bealzebuddy_Cooldown B;
@@ -103,15 +104,9 @@ public class Combat : MonoBehaviour
     }
     private void SpecialAttack()
     {
-        //if (Input.GetKey(KeyCode.P)/*&&(B.isCooldown==true)*/)
-        //{
-        //    anim.SetBool("SpecialAttack", true);
-        //}
-        //if (Time.time >= lastInputTime + inputTimer)
-        //{
-        //    //wait for new input 
+       //GameObject player= GameObject.FindGameObjectWithTag("Player");
+       // Collider2D col = player.GetComponent<Collider2D>();
         
-        //}
 
     }
     private void FinishSpecialAttack()//will gwt called at the end of attack animation 
@@ -149,4 +144,6 @@ public class Combat : MonoBehaviour
     {
         return gotInput;
     }
+
+    
 }

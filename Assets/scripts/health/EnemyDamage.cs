@@ -23,16 +23,31 @@ public class EnemyDamage : MonoBehaviour
 
         private void OnCollisionEnter2D(Collision2D collision)
         {
-            if (collision.gameObject.CompareTag("Player")&&(Input.GetKey(KeyCode.LeftControl)))
+            if (collision.gameObject.CompareTag("Player")&&(Input.GetKey(KeyCode.I)))
             {
                 //Debug.Log(C.ReturnIsAttacking());
                 gameObject.GetComponent<EnemyHealth>().health -= damage;
 
-            if (Health.health < 0)
+                if (Health.health < 0)
+                {
+                    { Destroy(gameObject); }
+                }
+            }
+            if (collision.gameObject.CompareTag("Player") && (Input.GetKey(KeyCode.P)))
             {
+            //Debug.Log(C.ReturnIsAttacking());
+            //gameObject.GetComponent<EnemyHealth>().health -= damage;
+
+                
                 { Destroy(gameObject); }
+                
             }
-            }
-        }
+
+
+
+
+    }
+        
+       
 }
 

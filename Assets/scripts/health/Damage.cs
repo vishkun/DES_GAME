@@ -23,7 +23,7 @@ public class Damage : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            player.GetComponent<PlayerHealth>().health -= 20;
+            player.GetComponent<PlayerHealth>().health -= damage;
         }
     }
 }

@@ -6,7 +6,7 @@ public class StartMenu : MonoBehaviour
     public GameObject startCanvas;
     public Button playButton;
 
-    private bool isPaused = false;
+    public bool isPaused = false;
 
     void Start()
     {

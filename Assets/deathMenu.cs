@@ -41,11 +41,11 @@ public class deathMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (playerHealth.health <1.0f)
+        if (playerHealth.health <=1.0f)
         {
             anim.SetTrigger("die");
             //deathCanvas.SetActive(true);
-            Invoke("death", 2.0f);
+            Invoke("death", 4.0f);
         }
     }
 

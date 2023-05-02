@@ -24,7 +24,25 @@ public class END_GAME : MonoBehaviour
             canvas.SetActive(true);
             play.Play();
             videoPlayer.SetActive(true);
-            //Destroy(videoPlayer, timetoStop);
+            Invoke("quit", 40.0f);
+
         }
     }
+
+    
+
+
+
+    
+    private void quit()
+    {
+    #if UNITY_EDITOR
+    UnityEditor.EditorApplication.isPlaying = false;
+    #endif
+    Application.Quit();
+
+    }
+    
+
+
 }

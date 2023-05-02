@@ -18731,7 +18731,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -115, y: -939}
+  m_AnchoredPosition: {x: -65, y: -939}
   m_SizeDelta: {x: 450, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &538101955
@@ -85915,6 +85915,8 @@ MonoBehaviour:
   playerHealth: {fileID: 1869910199}
   quit: {fileID: 1742535383}
   restartGame: {fileID: 432249603}
+  anim: {fileID: 0}
+  player: {fileID: 0}
 --- !u!82 &2047880175
 AudioSource:
   m_ObjectHideFlags: 0
@@ -91236,7 +91238,7 @@ PrefabInstance:
       objectReference: {fileID: 2133985313}
     - target: {fileID: 5976053026586724704, guid: f6121109ed23d904589627da4603b37e, type: 3}
       propertyPath: health
-      value: 9
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5976053026586724704, guid: f6121109ed23d904589627da4603b37e, type: 3}
       propertyPath: audioClip
@@ -91548,6 +91550,10 @@ PrefabInstance:
     - target: {fileID: 7866448642367277352, guid: 6a9a656c9c5501547bbd1b255009aa70, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7866448642367277352, guid: 6a9a656c9c5501547bbd1b255009aa70, type: 3}
+      propertyPath: m_TagString
+      value: enemy
       objectReference: {fileID: 0}
     - target: {fileID: 7866448642367277353, guid: 6a9a656c9c5501547bbd1b255009aa70, type: 3}
       propertyPath: m_RootOrder

@@ -15,6 +15,9 @@ public class deathMenu : MonoBehaviour
 
     public Button quit;
     public Button restartGame;
+
+    public Animator anim;
+    public GameObject player;
     
 
     //public GameObject startMenu;
@@ -25,6 +28,8 @@ public class deathMenu : MonoBehaviour
         restartGame = deathCanvas.transform.Find("continueButton").GetComponent<Button>();
         restartGame.onClick.AddListener(ResetGame);
 
+        player = GameObject.FindGameObjectWithTag("Player");
+        anim=player.GetComponent<Animator>();
         quit = deathCanvas.transform.Find("quitButton").GetComponent<Button>();
         quit.onClick.AddListener(QuitGame);
 
@@ -38,7 +43,9 @@ public class deathMenu : MonoBehaviour
     {
         if (playerHealth.health == 1)
         {
-            deathCanvas.SetActive(true);
+            anim.SetTrigger("die");
+            //deathCanvas.SetActive(true);
+            Invoke("death", 2.0f);
         }
     }
 
@@ -53,6 +60,17 @@ public class deathMenu : MonoBehaviour
         
     }
 
+    
+
+
+
+    
+        private void death()
+        {
+            deathCanvas.SetActive(true);
+
+        }
+
     void QuitGame()
     {
         #if UNITY_EDITOR
@@ -61,5 +79,7 @@ public class deathMenu : MonoBehaviour
         Application.Quit();
     }
 }
+
+
 
 

@@ -33,10 +33,10 @@ public class PlayerHealth : MonoBehaviour
         //if(health)
         if(player.gameObject.GetComponent<PlayerHealth>().health < 0)
         {
-          
-                //anim.SetTrigger("die");
 
-               Destroy(gameObject);
+            //anim.SetTrigger("die");
+
+            gameObject.SetActive(false);
                
 
         }

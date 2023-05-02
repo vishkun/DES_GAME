@@ -51,8 +51,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b4a1a028edab8d4682368654e71ebea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pHealth: {fileID: 0}
-  damage: 0
+  damage: 1
 --- !u!114 &-959149061913041356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65,8 +64,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9b7093727136b5478c7281f649d62b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
-  maxHealth: 0
+  health: 1
+  maxHealth: 1
 --- !u!114 &-8360852805366110991
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80,7 +79,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Health: {fileID: -959149061913041356}
+  player: {fileID: 0}
   damage: 0
+  C: {fileID: 0}
 --- !u!114 &6741115354346886829
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -93,12 +94,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0aaffb6af0676e4dac43619ff6e6481, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colliderDistance: 0.1
+  colliderDistance: 0
   boxCollider: {fileID: 6741115354346886802}
-  range: 2.6
+  range: 1.5
   playerLayer:
     serializedVersion: 2
     m_Bits: 8
+  Pat: {fileID: 0}
+  speed: 0
+  idleDuration: 0
+  anim: {fileID: 0}
+  enemy: {fileID: 0}
+  damage: 0
+  P: {fileID: 0}
 --- !u!50 &6741115354346886800
 Rigidbody2D:
   serializedVersion: 4
@@ -205,7 +213,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.3105631, y: -3.2436323}
+  m_Offset: {x: -0.25, y: -0.5}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -216,5 +224,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.7327747, y: 4.3127346}
+  m_Size: {x: 9, y: 10}
   m_EdgeRadius: 0
